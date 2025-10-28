@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📚 My Book Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>📖 My Personal Book Library</h1>
+    <p class="note">
+      This app saves your books and progress only in your web.<br>
+      If you clear your site data, everything will be lost.<br>
+      Hope you enjoy using it and keep reading! 🌟
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="add-book-form">
+      <input type="text" id="title" placeholder="Book Title" required />
+      <input type="text" id="author" placeholder="Author" />
+      <input type="number" id="rating" placeholder="Rating (1–5)" min="1" max="5" />
+      <textarea id="notes" placeholder="Notes about the book"></textarea>
+      <input type="number" id="page" placeholder="Page reached" min="1" />
+      <button id="addBook">Add Book</button>
+      <button id="clearAll">Clear All Books</button>
+    </div>
+
+    <div class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search by title or author..." />
+      <select id="ratingFilter">
+        <option value="all">All Ratings</option>
+        <option value="5">⭐ 5 Stars</option>
+        <option value="4">⭐ 4 Stars & Up</option>
+        <option value="3">⭐ 3 Stars & Up</option>
+        <option value="2">⭐ 2 Stars & Up</option>
+        <option value="1">⭐ 1 Star & Up</option>
+      </select>
+      <button id="toggleFavorites">❤️ Show Favorites Only</button>
+    </div>
+
+    <div class="books-list" id="booksList"></div>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for book lovers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
